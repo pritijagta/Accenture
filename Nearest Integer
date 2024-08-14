@@ -1,0 +1,34 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    
+    public static void nearest_int(int num, int m)
+    {
+        int i=0;
+        while(i<num)
+        {
+            i=i+m;
+        }
+        
+        int n1=i-m;
+        int n2=i;
+        
+        
+        if((num-n1)<(n2-num))
+        {
+            System.out.print(n1);
+        }
+        
+        else{
+            System.out.print(n2);
+        }
+       
+       
+      }
+        
+    public static void main(String[] args) 
+    {
+       nearest_int(67,8);
+    }
+}
