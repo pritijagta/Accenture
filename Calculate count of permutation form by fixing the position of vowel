@@ -1,0 +1,32 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    
+    public static void permutation(String s)
+    {
+        String s1=s.toLowerCase();
+        int count=0;
+        for(int i=0;i<s.length();i++)
+        {
+            char c=s1.charAt(i);
+            if(!(c=='a' || c=='e' || c=='i' || c=='o' || c=='e'))
+            {
+                count++;
+            }
+        }
+        int fact=1;
+        for(int i=1;i<=count;i++)
+        {
+            fact=fact*i;
+        }
+        System.out.print(fact);
+    }
+    public static void main(String[] args) 
+    {
+        
+        permutation("CDF");
+       
+        
+    }
+}
