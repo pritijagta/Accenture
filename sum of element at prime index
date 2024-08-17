@@ -1,0 +1,35 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    
+    public static void prime_sum(int a[])
+    {
+        int sum=0;
+        for(int i=2;i<a.length;i++)
+        {
+            boolean check=false;
+            for(int j=2;j<i;j++)
+            {
+                if(i%j==0)
+                {
+                    check=true;
+                }
+            }
+            
+            if(check==false)
+            {
+                sum=sum+a[i];
+            }
+        }
+        
+        System.out.print(sum);
+    }
+    
+    public static void main(String[] args) {
+        
+        int a[]={-4,5};
+        prime_sum(a);
+        
+    }
+}
