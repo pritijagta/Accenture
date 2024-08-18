@@ -1,0 +1,21 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void min_unit(int N,int x,int y)
+    {
+        int unit=0;
+            while(N>100)
+            {
+                unit=unit+x;
+                N=N-100;
+            }
+            unit+=(N/4)*y+(N%4)*y;
+            
+            System.out.print(unit);
+    }
+    public static void main(String[] args) {
+        
+        min_unit(105,80,10);
+    }
+}
