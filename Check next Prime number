@@ -1,0 +1,41 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    
+    public static void next_prime(int a,int b)
+    {
+        int num=a+1;
+        boolean check=false;
+        int i;
+        while(check==false)
+        {
+            check=true;
+        for( i=2;i<num;i++)
+        {
+            if((num%i)==0)
+            {
+               check=false;
+                num++;
+                break;
+            }
+        }
+      
+        }
+        
+       // System.out.print(num);
+        if(num==b)
+        {
+            System.out.print("true");
+        }
+        else{
+             System.out.print("false");
+        }
+    
+    }
+    public static void main(String[] args) {
+      int a=11;
+      int b=13;
+      next_prime(a,b);
+    }
+}
