@@ -1,0 +1,47 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    
+    public static void countOccurrences(String s1,String s2)
+    {
+       int j=0;
+        int i=0;
+        int count=0;
+        while(i<s1.length())
+        {
+           if(s1.charAt(i)==s2.charAt(j))
+           {
+               
+               boolean flag=true;
+              for(int k=0;k<s2.length();k++)
+              {
+                  
+                  if(!(s1.charAt(i)==s2.charAt(k)))
+                  {
+                      flag=false;
+                      break;
+                  }
+                  i++;
+              }
+              
+              if(flag==true)
+              {
+                   
+                  count++;
+                  i++;
+              }
+           }
+           else{
+               i++;
+           }
+        }
+        System.out.print(count);
+    }
+    public static void main(String[] args) {
+        
+        String s1="hellomyhelhelloishello";
+        String s2="hello";
+        countOccurrences(s1,s2);
+    }
+}
