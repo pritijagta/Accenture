@@ -1,0 +1,27 @@
+class Solution {
+    public List<String> letterCombinations(String digits) {
+        
+        LinkedList<String>q=new LinkedList<>();
+        if(digits.length()==0)
+        {
+            return q;
+        }
+
+        String []map={"0","1","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+
+        q.add("");
+
+        while(q.peek().length()!=digits.length())
+        {
+            String remove=q.remove();
+            String s=map[digits.charAt(remove.length())-'0'];
+            
+            for(char i:s.toCharArray())
+            {
+                q.add(remove+i);
+            }
+        }
+         return q;
+    }
+   
+}
