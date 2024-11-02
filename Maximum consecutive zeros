@@ -1,0 +1,41 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    
+    public static void consecutiveZero(String s)
+    {
+        
+        int prelength=0;
+        int postlength=0;
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)=='0')
+            {
+                
+                prelength++;
+            }
+            
+            else{
+                if(prelength>postlength)
+                {
+                    postlength=prelength;
+                    
+                }
+                
+                prelength=0;
+            }
+            
+        }
+          if (prelength > postlength) {
+            postlength = prelength;
+        }
+        System.out.print(postlength);
+    }
+    public static void main(String[] args) {
+        
+        consecutiveZero("100100000000100001");
+        
+        
+    }
+}
