@@ -1,0 +1,30 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static int maximum_product(int N)
+    {
+        if(N<=3)
+        {
+            return N-1;
+        }
+        int product=1;
+        while(N>4)
+        {
+            product*=3;
+            N=N-3;
+        }
+        product*=4;
+        return product;
+    }
+    public static void main(String[] args) {
+       System.out.print(maximum_product(3));
+    }
+    
+    
+    
+    
+    
+    
+    
+}
