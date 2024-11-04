@@ -1,0 +1,54 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void Maintain_index(int arr[],int N)
+    {
+        
+        ArrayList<Integer>l=new ArrayList<>();
+        int result[]=new int[N];
+        for(int i=0;i<N;i++)
+        {
+        if(!l.contains(arr[i]))
+        {
+            l.add(arr[i]);
+        }
+        }
+        int index[]=new int[N];
+        Collections.sort(l);
+        int n=l.size()-1;
+        int j=0;
+        while(n>=0)
+        {
+            int value=l.get(n);
+            for(int i=0;i<N;i++)
+            {
+                if(value==arr[i])
+                {
+                    result[j]=i;
+                    j++;
+                    
+                }
+            }
+            n--;
+        }
+       
+       for(int i:result)
+       {
+           System.out.println(i);
+       }
+        
+    }
+    public static void main(String[] args) {
+        int arr[]={30,20,10,20,30};
+        int N=5;
+       Maintain_index(arr,N);
+    }
+}
+
+
+
+
+
+
+
