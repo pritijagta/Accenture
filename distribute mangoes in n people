@@ -1,0 +1,33 @@
+class Main {
+    
+    public static int binomial(int n,int m)
+    {
+        int res=1;
+        
+        for(int i=0;i<m;i++)
+        {
+            res*=(n-i);
+            res/=(i+1);
+        }
+        
+        return res;
+    }
+    public static int countways(int m,int n)
+    {
+        if(m==1)
+        return n;
+        
+        int res=binomial(m+n-1,n-1);
+        return res;
+    }
+    
+    public static void main(String[] args) {
+        
+        int m=5;
+        int n=2;
+        
+        
+        System.out.print(countways(m,n));
+        
+    }
+}
