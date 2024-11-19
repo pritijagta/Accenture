@@ -1,0 +1,39 @@
+import java.util.*;
+class Main {
+    
+    public static int autobiographical(String num)
+    {
+        int countdistinct=0;
+
+        for(int i=0;i<num.length();i++)
+        {
+            int n=num.charAt(i)-'0';
+            if(n!=0)
+            {
+                countdistinct++;
+                
+            }
+            int count=0;
+            for(int j=0;j<num.length();j++)
+            {
+                if(num.charAt(j)-'0'==i)
+                {
+                    count++;
+                }
+            }
+            if(count!=n)
+            {
+               return 0;
+            }
+        }
+        
+        return countdistinct;
+    }
+   
+    
+    public static void main(String[] args) 
+    {
+        System.out.print(autobiographical("1234"));
+        
+    }
+}
