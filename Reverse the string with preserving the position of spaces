@@ -1,0 +1,48 @@
+
+import java.util.*;
+public class Main {
+
+	// Function to print all the permutations of str
+	static void reverseString(String str)
+	{
+
+        String s1[]=str.split(" ");
+        StringBuilder result=new StringBuilder();
+        
+        int i=str.length()-1;
+        int index=0;
+        
+        while(i>=0)
+        {
+            
+            int count=s1[index].length();
+            for(int j=0;j<count;j++)
+            {
+                if(str.charAt(i)==' ')
+                {
+                    i--;
+                    count++;
+                    
+                }
+                else
+                {
+                result.append(str.charAt(i));
+                i--;
+                }
+                
+            }
+            result.append(" ");
+            index++;
+        }
+        
+        System.out.println(result.toString());
+		
+	}
+
+	// Driver code
+	public static void main(String[] args)
+	{
+		String s = "you are so bad girls";
+		reverseString(s);
+	}
+}
