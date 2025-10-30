@@ -1,0 +1,30 @@
+import java.util.*;
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+
+        List<Integer> l=new ArrayList<>();
+
+        for(int i:nums)
+        {
+            l.add(i);
+        }
+
+    for(int i=0;i<nums.length;i++)
+    {
+        int complement=target-nums[i];
+
+        if(l.contains(complement))
+        {
+            int j=l.indexOf(complement);
+
+            if(i!=j)
+            {
+                return new int[]{i,j};
+            }
+        }
+    }
+
+       
+    return new int[]{};   
+}
+}
